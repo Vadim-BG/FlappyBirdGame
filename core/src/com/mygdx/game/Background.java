@@ -18,7 +18,7 @@ public class Background {
     private BGPictire[] backs;
 
     public Background() {
-        speed = 4;
+        speed = 1;
         backs = new BGPictire[2];
         backs[0] = new BGPictire(new Vector2(0,0));
         backs[1] = new BGPictire(new Vector2(800,0));

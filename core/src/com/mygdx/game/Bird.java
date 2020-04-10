@@ -14,7 +14,7 @@ public class Bird {
 
     public Bird() {
         img = new Texture("Bird.png");
-        position = new Vector2(100, 300);
+        position = new Vector2(100, 380);
         vy = 0;
         gravity = -0.7f;
     }
@@ -24,11 +24,16 @@ public class Bird {
     }
 
     public void update() {
-        if (Gdx.input.isKeyPressed(Input.Keys.SPACE)){
-            vy = 10;
+        if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)){
+            vy = 13;
         }
         vy += gravity;
         position.y += vy;
+    }
+
+    public void recreate(){
+        position = new Vector2(100, 380);
+        vy = 0;
     }
 
 }
